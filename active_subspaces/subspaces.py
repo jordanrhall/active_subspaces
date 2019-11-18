@@ -170,10 +170,8 @@ class Subspaces():
             the dimension of the active subspace
         
         """
-        if not isinstance(n, int):
-            #raise TypeError('n should be an integer')
-            n = int(n)
-            print(Warning("n should be an integer. Performing conversion."))
+        # Cast n as an integer.
+        n = int(n)
 
         m = self.eigenvecs.shape[0]
         if n<1 or n>m:
